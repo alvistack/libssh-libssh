@@ -1,0 +1,3 @@
+libssh source: no-debian-changes
+libssh source: not-binnmuable-any-depends-any
+libssh source: weak-library-dev-dependency

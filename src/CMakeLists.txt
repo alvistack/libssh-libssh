@@ -102,6 +102,11 @@ if (BUILD_STATIC_LIB)
   )
 endif (BUILD_STATIC_LIB)
 
+set(LIBSSH_LIBRARY_NAME
+  ssh
+  CACHE INTERNAL "libssh library name"
+)
+
 set(libssh_SRCS
   agent.c
   auth.c
@@ -382,6 +387,8 @@ set_target_properties(ssh
         ${LIBRARY_VERSION}
       SOVERSION
         ${LIBRARY_SOVERSION}
+      OUTPUT_NAME
+        ${LIBSSH_LIBRARY_NAME}
       DEFINE_SYMBOL
         LIBSSH_EXPORTS
 )
@@ -435,7 +442,7 @@ if (BUILD_STATIC_LIB)
         SOVERSION
           ${LIBRARY_SOVERSION}
         OUTPUT_NAME
-          ssh
+          ${LIBSSH_LIBRARY_NAME}
         ARCHIVE_OUTPUT_DIRECTORY
           ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_SUFFIX}
   )
@@ -443,6 +450,13 @@ if (BUILD_STATIC_LIB)
   if (WIN32)
     target_compile_definitions(ssh-static PUBLIC "LIBSSH_STATIC")
   endif (WIN32)
+
+  install(TARGETS
+            ssh-static
+          DESTINATION
+            ${LIB_INSTALL_DIR}/${OUTPUT_SUFFIX}
+          COMPONENT
+            libraries)
 endif (BUILD_STATIC_LIB)
 
 message(STATUS "Threads_FOUND=${Threads_FOUND}")
