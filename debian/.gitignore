@@ -1,0 +1,12 @@
+*.substvars
+*debhelper*
+.debhelper
+autoreconf.*
+files
+libssh-4
+libssh-dev
+libssh-doc
+libssh-gcrypt-4
+libssh-gcrypt-dev
+tmp
+tmp-gcrypt

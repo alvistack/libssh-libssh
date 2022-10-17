@@ -1,0 +1,88 @@
+Source: libssh
+Section: libs
+Priority: optional
+Standards-Version: 4.5.0
+Maintainer: Wong Hoi Sing Edison <hswong3i@gmail.com>
+Homepage: https://git.libssh.org/projects/libssh.git
+Vcs-Browser: https://github.com/alvistack/libssh-libssh
+Vcs-Git: https://github.com/alvistack/libssh-libssh.git
+Build-Depends:
+ debhelper,
+ debhelper-compat (= 10),
+ cmake (>= 2.8.5),
+ libcmocka-dev <!nocheck>,
+ libgcrypt-dev,
+ libkrb5-dev | heimdal-dev,
+ libssh-4 <!nocheck>,
+ libssl-dev,
+ openssh-client <!nocheck>,
+ openssh-server <!nocheck>,
+ pkg-config,
+ zlib1g-dev | libz-dev,
+
+Package: libssh-4
+Architecture: amd64
+Description: tiny C SSH library (OpenSSL flavor)
+ The ssh library was designed to be used by programmers needing a working SSH
+ implementation by the mean of a library. The complete control of the client
+ is made by the programmer. With libssh, you can remotely execute programs,
+ transfer files, use a secure and transparent tunnel for your remote programs.
+ With its SFTP implementation, you can play with remote files easily.
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Breaks:
+ remmina (<< 1.2.31.2+dfsg-1+),
+ remmina-plugin-nx (<< 1.2.31.2+dfsg-1+),
+ x2goclient (<< 4.1.2.1-1+),
+
+Package: libssh-gcrypt-4
+Architecture: amd64
+Built-Using: ${Built-Using}
+Description: tiny C SSH library (gcrypt flavor)
+ The ssh library was designed to be used by programmers needing a working SSH
+ implementation by the mean of a library. The complete control of the client
+ is made by the programmer. With libssh, you can remotely execute programs,
+ transfer files, use a secure and transparent tunnel for your remote programs.
+ With its SFTP implementation, you can play with remote files easily.
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+
+Package: libssh-dev
+Section: libdevel
+Architecture: amd64
+Description: tiny C SSH library - Development files (OpenSSL flavor)
+ The ssh library was designed to be used by programmers needing a working SSH
+ implementation by the mean of a library. The complete control of the client
+ is made by the programmer. With libssh, you can remotely execute programs,
+ transfer files, use a secure and transparent tunnel for your remote programs.
+ With its SFTP implementation, you can play with remote files easily.
+Depends:
+ ${misc:Depends},
+ libssh-4 (= ${source:Version}),
+ libssl-dev,
+ zlib1g-dev,
+Conflicts:
+ libssh-gcrypt-dev,
+
+Package: libssh-gcrypt-dev
+Section: libdevel
+Architecture: amd64
+Description: tiny C SSH library - Development files (gcrypt flavor)
+ The ssh library was designed to be used by programmers needing a working SSH
+ implementation by the mean of a library. The complete control of the client
+ is made by the programmer. With libssh, you can remotely execute programs,
+ transfer files, use a secure and transparent tunnel for your remote programs.
+ With its SFTP implementation, you can play with remote files easily.
+Depends:
+ ${misc:Depends},
+ libgcrypt-dev,
+ libssh-gcrypt-4 (= ${source:Version}),
+ zlib1g-dev,
+Conflicts:
+ libssh-dev,
