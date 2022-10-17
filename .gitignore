@@ -9,3 +9,5 @@ compile_commands.json
 tags
 /build
 /obj*
+build-gcrypt/
+build-openssl/
