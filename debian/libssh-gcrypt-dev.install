@@ -1,0 +1,5 @@
+usr/include/libssh/
+usr/lib/*/cmake/libssh/
+usr/lib/*/libssh.a
+usr/lib/*/libssh.so
+usr/lib/*/pkgconfig/
