@@ -1,0 +1,4 @@
+libssh-4: copyright-without-copyright-notice
+libssh-4: initial-upload-closes-no-bugs
+libssh-4: package-name-doesnt-match-sonames
+libssh-4: zero-byte-file-in-doc-directory
