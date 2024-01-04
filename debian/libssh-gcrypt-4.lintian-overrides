@@ -1,0 +1,6 @@
+libssh-gcrypt-4: copyright-without-copyright-notice
+libssh-gcrypt-4: initial-upload-closes-no-bugs
+libssh-gcrypt-4: lacks-versioned-link-to-shared-library
+libssh-gcrypt-4: package-name-doesnt-match-sonames
+libssh-gcrypt-4: symbols-file-contains-current-version-with-debian-revision
+libssh-gcrypt-4: zero-byte-file-in-doc-directory

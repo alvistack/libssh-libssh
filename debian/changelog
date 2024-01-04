@@ -1,0 +1,5 @@
+libssh (100:0.11.2-1) UNRELEASED; urgency=medium
+
+  * https://git.libssh.org/projects/libssh.git/tag/?h=libssh-0.11.2
+
+ -- Wong Hoi Sing Edison <hswong3i@pantarei-design.com>  Wed, 25 Jun 2025 15:23:31 +0800

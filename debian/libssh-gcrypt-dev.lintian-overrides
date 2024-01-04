@@ -1,0 +1,3 @@
+libssh-gcrypt-dev: copyright-without-copyright-notice
+libssh-gcrypt-dev: initial-upload-closes-no-bugs
+libssh-gcrypt-dev: zero-byte-file-in-doc-directory
