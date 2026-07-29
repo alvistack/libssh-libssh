@@ -11,3 +11,5 @@ tags
 /obj*
 doc/tags.xml
 .DS_Store
+build-gcrypt/
+build-openssl/

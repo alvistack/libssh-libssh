@@ -1,0 +1,3 @@
+libssh-dev: copyright-without-copyright-notice
+libssh-dev: initial-upload-closes-no-bugs
+libssh-dev: zero-byte-file-in-doc-directory
